@@ -1,0 +1,72 @@
+name: api-deploy
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY: rsmar12-api
+  ECS_SERVICE: rsmar12-api
+  ECS_CLUSTER: rsmar12-ecs-backend
+  ECS_TASK_DEFINITION: ./api/task-definition.json 
+  CONTAINER_NAME: rsmar12-api                             
+
+jobs:
+  build-api:
+    runs-on: ubuntu-22.04
+    environment: staging
+
+    defaults:
+      run:
+        working-directory: ./api
+        
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Login to ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+      
+      - name: Build, tag, and push image to ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+      - name: Render task definition
+        id: task-def
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: ${{ env.ECS_TASK_DEFINITION }}
+          container-name: ${{ env.CONTAINER_NAME }}
+          image: ${{ steps.build-image.outputs.image }}
+          environment-variables: |
+            ASPNETCORE_ENVIRONMENT=Staging
+            ConnectionStrings__Default=${{ secrets.DEFAULT_CONNECTION_STRING }}
+
+      - name: Deploy ECS task definition
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.task-def.outputs.task-definition }}
+          service: ${{ env.ECS_SERVICE }}
+          cluster: ${{ env.ECS_CLUSTER }}
+          wait-for-service-stability: true
+
+      
+
+
+  

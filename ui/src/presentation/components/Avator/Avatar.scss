@@ -1,0 +1,104 @@
+@import "../../_variables";
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+
+  .avatar {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+
+    span {
+      font-size: 1.5em;
+      color: $primary-color;
+      font-weight: 800;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    width: 18rem;
+    top: 3rem;
+    right: 2rem;
+    background-color: $color-white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.8rem;
+    .changePassword{
+      width: 50vw;
+      padding: 2vh 3.5vw 4vh 3.5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5vh;
+
+    }
+ 
+    h2 {
+      color: $black-color;
+      font-size: 1.125em;
+      font-weight: 800;
+      margin-left: 0.2rem;
+      cursor: default;
+    }
+
+    ul {
+      list-style-type: none;
+      font-weight: 600;
+      padding: 0;
+      margin: 0;
+      color: $light-grey-text-color;
+
+      li {
+        padding: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+      .logoutButton {
+        color: $red-color;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.changePassword{
+  width: 598px;
+  padding: 2vh 3.5vw 4vh 3.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+
+}
+.changePassword button{
+  background-color: $primary-color;
+  color: white;
+  width: 100%;
+}
+.changePasswordDiv{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: red;
+  gap:5px;
+  font-size: .8rem;
+}

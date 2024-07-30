@@ -1,0 +1,38 @@
+@import "../../variables";
+
+.submitButton {
+  height: 3.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: $primary-color;
+  color: $color-white;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+button {
+  background-color: transparent;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: $primary-color;
+  border-color: $primary-color;
+  border-radius: 5px;
+  height: 3.5rem;
+  border: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.editButton{
+  height: 3.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: $primary-color;
+  color: $color-white;
+  font-size: 1.25em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}

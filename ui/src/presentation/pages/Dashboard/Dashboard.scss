@@ -1,0 +1,116 @@
+@import "../../variables";
+.dashboardWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .dashboardContent {
+    /* Adjust padding to avoid content being covered by the navbar */
+    margin-top: 5.6rem;
+  }
+  .navbar {
+    background-color: $primary-color;
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      font-size: 2.5em;
+      cursor: pointer;
+    }
+
+    .menuBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .menuItem {
+        width: 12.5rem;
+        height: 3.625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .selectedMenuItem {
+        border: none;
+        background-color: $color-white;
+        color: $primary-color;
+        font-weight: 700;
+      }
+    }
+
+    .menuBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .menuItem {
+        width: 12.5rem;
+        height: 3.625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .selectedMenuItem {
+        border: none;
+        background-color: $color-white;
+        color: $primary-color;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .msgSuccess {
+    color: $black-color;
+    padding-right: 30px;
+  }
+  .msgERROR {
+    color: red;
+    padding-right: 30px;
+  }
+  .displayMsg {
+    display: flex;
+    gap: 3px;
+    background-color: #bddb9c;
+    min-width: 25vw;
+    padding: 5px;
+    width: auto;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: "12px 12px 15px rgba(0, 0, 0, 0.2)";
+    left: 50%;
+    margin-top: 3vh;
+    border: 1px solid $primary-color;
+    transform: translateX(-50%);
+    padding-left: 50px;
+    padding-right: 30px;
+    div {
+      display: flex;
+      gap: 10px;
+    }
+    .closeMsg {
+      content: url("../../../assets/closeBtnBlack.svg");
+      width: 15px;
+      height: 15px;
+      font-size: 1.2rem;
+      .closeMsg:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+}

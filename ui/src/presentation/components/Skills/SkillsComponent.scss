@@ -1,0 +1,236 @@
+.skillMain{
+    .addSearchSkill{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .addSkillBtn{
+        padding: 10px;
+        background-color: #77B634;
+        color: white;
+        width: 10vw;
+        margin-top: 1vw;
+    }
+}
+
+@import "../../_variables";
+.RolePg{
+    margin-top: 2vh;
+    display: flex;
+    width: 96vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    flex-direction: column;
+}
+.AddRole{
+    margin-top: 2vh;
+    display: flex;
+    width: 96vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    justify-content: space-between;
+    align-items: center;
+    .searchRole{
+        height: auto;
+        width: 40vw;
+        border: 1px solid rgb(128, 128, 128, .4);
+        padding: 1vw;
+        border-radius: 5px;
+    }
+    .AddRoleBtn button{
+        background-color: $primary-color;
+        color: white;
+        width: 20vw;
+    }
+
+
+ 
+ }
+ .roleClicked{
+    display: flex;
+    width: 46vw;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 1vw;
+    padding-right: 1vw;
+ }
+ .roleClicked .roleName{
+    color: $primary-color;
+  
+}.roleClicked .moreIco{
+    color: white;
+}
+.roleNotClicked{
+        display: flex;
+        width: 46vw;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgb(0, 0, 0, .4);
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 500;
+        padding-left: 1vw;
+        padding-right: 1vw;
+}
+ .moreIcon{
+  
+    content: url("../../../assets/More.svg");
+}
+.moreIco{
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    color: white;
+}
+
+
+  
+  
+
+.sec2{
+    display: flex;
+    width: 96vw;
+    gap: 4vw;
+    .displayRolesEmployee{
+        width: 46vw;
+        margin-top: 5vh;
+    ;
+        .roles{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+       
+    }
+}
+.addScroll{
+    height: 55vh;
+        overflow-y: auto;
+        padding-right:1vw;
+}
+.disEmployee{
+    width: 46vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+}
+.disEmployeeViewProfile{
+    display: flex;
+    width: 37vw;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3vw;
+    border-radius: 5px;
+    padding-right: 3vw;
+    height: 10vh;
+}
+.viewProfile{
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    border: 1.5px solid $primary-color;
+    background-color: white;
+    border-radius: 5px;
+    height: 5vh;
+    align-items: center;
+    font-size: 15px;
+}
+.employeeHeading{
+    margin-top: 1vh;
+    width: 37vw;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+}
+.RoleName{
+    color: $primary-color;
+
+    
+
+}
+
+.iconContainer {
+    position: relative;
+    display: inline-block;
+  }
+  
+
+
+.moreIcon {
+    cursor: pointer;
+  }
+  
+  .menuProjects{
+    display: flex;
+    position: absolute;
+ 
+    bottom: -100px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-90%);
+    
+
+    width: 18rem;
+
+    background-color: $color-white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.8rem;
+  
+    ul {
+      list-style-type: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0;
+      margin: 0;
+      color: $light-grey-text-color;
+      li {
+        padding: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+        
+  
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+      .delClient {
+        color: $red-color;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+  }
+  .main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Use rgba for transparency */
+    z-index: 9999;
+  }
+@media screen and (min-width: 1920px) {
+    .addScroll {
+        height: 80vh; 
+        overflow-y: none;
+    }
+}

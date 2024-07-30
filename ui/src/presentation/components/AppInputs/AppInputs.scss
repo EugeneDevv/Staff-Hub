@@ -1,0 +1,163 @@
+@import "../../variables";
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // min-height: 100vh;
+  height: auto;
+  position: relative;
+
+  .customInput{
+    font-weight: 700;
+    font-size: 0.8em;
+    color: $black-color;
+  }
+  label {
+    font-weight: 700;
+    font-size: 0.8em;
+    color: $primary-color;
+
+    margin-bottom: 0.8rem;
+    span {
+      color: $red-color;
+    }
+  }
+
+  .leading-icon {
+    position: absolute;
+    top: 60%;
+    left: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  /* Input field */
+  .input {
+    height: 2.8rem;
+    font-size: 1em;
+    font-weight: 500;
+    width: 100%;
+    color: $black-color;
+    background-color: $accent-color-40;
+    border: 1px solid $primary-color;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    padding: 10px 14px;
+    cursor: text;
+
+    &::placeholder {
+      font-size: 1em;
+      font-weight: 500;
+      color: $light-grey-text-color;
+      padding-left: 0.5rem;
+    }
+
+    /* Input field focus */
+    &:focus {
+      outline: none; /* Add focus styles as needed */
+    }
+  }
+
+  .inputWithLeadingIcon {
+    padding-left: 2.8rem;
+  }
+
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }
+
+  .error-input {
+    border: 1px solid $red-color;
+  }
+
+  .error {
+    color: $red-color;
+    font-size: 0.8;
+    font-weight: 400;
+    margin-left: 12px;
+    margin-top: 4px;
+  }
+}
+
+.password-input {
+  position: relative;
+
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}
+
+.customDropdownWrapper {
+  position: relative;
+  .selectedOption {
+    padding: 10px;
+    border: 1px solid $primary-color;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: $light-grey-text-color;
+    padding-left: 1.2rem;
+    background-color: $accent-color-40;
+  }
+
+  .error-input {
+    border: 1px solid $red-color;
+  }
+
+  .optionSelected {
+    color: $black-color;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .options {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    list-style: none;
+    border-radius: 5px;
+    background-color: $color-white;
+    /* Drop shadow */
+    box-shadow: 2px 4px 4px 2px $black-color-25;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .options li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+    background-color: $hover-color;
+  }
+  }
+
+  .richAction{
+    font-weight: 700;
+    font-size: 1rem;
+    padding-top: 0.4rem;
+    color: $primary-color;
+    cursor: pointer;
+  }
+}

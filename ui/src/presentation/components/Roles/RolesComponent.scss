@@ -1,0 +1,244 @@
+@import "../../_variables";
+.RolePg{
+    margin-top: 2vh;
+    display: flex;
+    width: 96vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    flex-direction: column;
+}
+.AddRole{
+
+    display: flex;
+    width: 96vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    justify-content: space-between;
+    align-items: center;
+    .searchRole{
+        height: auto;
+        width: 40vw;
+        border: 1px solid rgb(128, 128, 128, .4);
+        padding: 1vw;
+        border-radius: 5px;
+    }
+    .AddRoleBtn button{
+        background-color: $primary-color;
+        color: white;
+        width: 20vw;
+    }
+
+
+ 
+ }
+ .roleClicked{
+    display: flex;
+    width: 46vw;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    
+ }
+ .roleClicked p{
+    color: $primary-color;
+  
+}.roleNotClicked{
+        display: flex;
+        width: 46vw;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgb(0, 0, 0, .4);
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 600;
+        padding-left: 1vw;
+        padding-right: 1vw;
+}
+ .moreIcon{
+  
+    content: url("../../../assets/More.svg");
+}
+
+
+  
+  
+
+.sec2{
+    display: flex;
+    width: 96vw;
+    gap: 4vw;
+    .displayRolesEmployee{
+        width: 46vw;
+        height: auto;
+        .roles{
+            display: flex;
+            flex-direction: column;
+            gap: 4vh;
+        }
+       
+    }
+}
+.addScroll{
+    width: 59vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+
+}
+.disEmployee{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 2vh;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 7px;
+    height: 60vh;
+    overflow-y: scroll;
+}
+.disEmployeeViewProfile{
+    display: flex;
+    width: 38vw;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    min-height: 10vh;
+}
+.disEmployeeViewProfile{
+    font-weight: 600;
+    font-size: 17px;
+}
+.viewProfile{
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    border: 1.5px solid $primary-color;
+    background-color: white;
+    border-radius: 5px;
+    height: 5vh;
+    align-items: center;
+    font-size: 15px;
+}
+.employeeHeading{
+    margin-top: 1vh;
+    width: 38vw;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    gap: 0.5rem;
+}
+.RoleName{
+    color: $primary-color;
+
+    
+
+}
+
+.iconContainer {
+    position: relative;
+    display: inline-block;
+  }
+  
+
+
+.moreIcon {
+    cursor: pointer;
+  }
+  .menuProjects{
+    display: flex;
+    position: absolute;
+ 
+    bottom: -100px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-90%);
+    
+
+    width: 18rem;
+
+    background-color: $color-white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.8rem;
+  
+    ul {
+      list-style-type: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0;
+      margin: 0;
+      color: $light-grey-text-color;
+      li {
+        padding: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+        
+  
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+      .delClient {
+        color: $red-color;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .popup {
+    display: flex;
+    position: absolute;
+ 
+    bottom: -30px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-90%);
+    
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .popup ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .popup li {
+    cursor: pointer;
+  }
+  
+  .popup.show {
+    display: block;
+  }
+  .rolesAvailable{
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 1vh;
+  }
+  .addScroll::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .addScroll::-webkit-scrollbar-thumb {
+    background-color: #7bb83a;
+    border-radius: 5px;
+  }
+@media screen and (min-width: 1920px) {
+    .addScroll {
+        height: 70vh; 
+        
+        
+    }
+}

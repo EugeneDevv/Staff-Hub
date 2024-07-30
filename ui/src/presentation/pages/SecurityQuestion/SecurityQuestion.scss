@@ -1,0 +1,102 @@
+@import "../../variables";
+.question-label {
+  font-size: 5px;
+}
+
+.SecurityQuestions {
+  display: flex;
+  height: 86vh;
+  overflow-y: auto;
+  margin-top: 10vh;
+  scrollbar-color: #7bb83a;
+  .securityQuestions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .submitQuestions {
+      height: 3.5rem;
+      border-radius: 5px;
+      border: none;
+      background-color: $primary-color;
+      color: $color-white;
+      font-size: 1em;
+      font-weight: 600;
+      width: 35vw;
+    }
+    .questions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3vh;
+      width: 45vw;
+      height: auto;
+      .checkboxandQuestion {
+        display: flex;
+        gap: 2vw;
+        width: 35vw;
+      }
+      .customInp {
+        margin-left: 3.5vw;
+      }
+    }
+    .answer-three {
+      color: rgb(102, 102, 102);
+      margin-bottom: 5vh;
+      margin-top: 1vh;
+    }
+  }
+}
+
+.SecurityQuestions::-webkit-scrollbar {
+  width: 10px;
+}
+
+.SecurityQuestions::-webkit-scrollbar-thumb {
+  background-color: #7bb83a;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1.5px solid $primary-color;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  background-color: white;
+}
+
+input[type="checkbox"]:after {
+  font-family: "Font Awesome 6 Free";
+  content: url("../../../assets/check.svg");
+  font-size: 1.2rem;
+  color: $primary-color;
+  display: none;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
+}
+
+input[type="checkbox"]:hover {
+  background-color: white;
+}
+.disSpinner {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

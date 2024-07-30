@@ -1,0 +1,59 @@
+
+@import "../../../variables";
+.closeBtn{
+    font-family: "Font Awesome 6 Free";
+    content: url("../../../../assets/CloseBtn.svg");
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem ;
+}
+.closeBtn:hover{
+    cursor: pointer;
+}
+.modal{
+    display: none;
+}
+.modal.open{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+    z-index: 1050;
+
+    .modal-content{
+        
+        background-color: white;
+        width: auto;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+       
+        .modal-header{
+            display: flex;
+            align-items: center;
+            background-color: $primary-color;
+            height: 10vh;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            justify-content: space-between;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            color: white;
+            .headingModal{
+                color: white;
+            }
+            .closeBtn path{
+                fill: white;
+            }
+        }
+    }
+ 
+}
+

@@ -1,0 +1,66 @@
+@import "../../variables";
+.securityQuestion{
+    color:  rgb(102, 102, 102);
+    font-weight: 600;
+    font-size: 16px;
+}
+.clickArrow{
+    color: rgb(102, 102, 102);
+    font-size: 13px;
+  
+}
+.selQuestion{
+    color: $primary-color;
+    display: flex;
+    font-weight: 700;
+    font-size: 0.8em;
+    width: 30vw;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+    .dropDownIcon{
+        content: url("../../../assets/DropDownGreen.svg");
+        height: 0.8rem;
+        // width: 1rem;
+    }   
+}
+.mainResetPassword{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    .ansSecurityQuestion{
+        display: flex;
+    flex-direction: column;
+    gap: 1.3vh;
+    }
+}
+.selQuestion {
+    position: relative; /* Set parent container to relative positioning */
+  }
+  
+  .questionsContainer {
+    position: absolute; /* Set questions container to absolute positioning */
+    top: 100%; /* Position below the .selQuestion content */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    display: flex;
+    flex-direction: column; 
+    color: rgb(102, 102, 102);
+    font-size: 16px;
+    font-weight: 400;
+    gap: 1vh;
+    padding: 10px;
+  }
+  .questionsContainer p{
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .questionsContainer p:hover{
+    background-color: rgb(228, 240, 214) ;
+  }
+  

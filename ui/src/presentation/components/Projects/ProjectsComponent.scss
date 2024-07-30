@@ -1,0 +1,331 @@
+@import "../../_variables";
+.addClientMain{
+ .displayClientProjects{
+    display: flex;
+    gap: 3vw;
+ }
+ .AddClient{
+    margin-top: 2vh;
+    display: flex;
+    width: 96vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    justify-content: space-between;
+    align-items: center;
+    .searchClient{
+        height: auto;
+        width: 40vw;
+        border: 1px solid rgb(128, 128, 128, .4);
+        padding: 1vw;
+        border-radius: 5px;
+    }
+    .AddClientBtn button{
+        background-color: $primary-color;
+        color: white;
+        width: 20vw;
+    }
+ }
+ .clientProjects{
+    width: 45vw;
+    display: flex;
+    border: 1px solid rgb(128, 128, 128, 0.4);
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+   
+    .mainProjectDisplay{
+        height: 80vh;
+        overflow-y: scroll;
+
+    }
+    .mainProjectDisplay::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      .mainProjectDisplay::-webkit-scrollbar-thumb {
+        background-color: #7bb83a;
+        border-radius: 5px;
+      }
+    .projectTeam{
+        display: flex;
+        margin-left: 1.5vw;
+        width: 37vw;
+        background-color:rgb(245, 251, 243);
+        border: 1.5px solid $primary-color;
+        border-radius: 5px;
+        margin-top: 1vh;
+        align-items: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        justify-content: space-between;
+        .viewProfile{
+            display: flex;
+            justify-content: center;
+            width: 10vw;
+            border: 1px solid $primary-color;
+            background-color: white;
+            border-radius: 5px;
+        }
+    }
+    .disProject{
+        margin-top: 3vh;
+        display: flex;
+        width: 40vw;
+        border: 1px solid rgb(128, 128, 128, 0.4);
+        font-size: 16px;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        border-radius: 5px;
+        font-weight: 600;
+       
+    }
+    .moreIcon{
+        content: url("../../../assets/More.svg");
+    }
+    .MoreIcon{
+      height: 9vh;
+      display: flex;
+      align-items: center;
+    }
+    .viewTeam{
+        display: flex;
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        height: auto;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 2px;
+        width: 15vw;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+      
+
+    }
+    .projectName{
+        width: 20vw;
+    }
+    .viewTeamBtn{
+        content: url("../../../assets/DropDownGreen.svg");
+        height: 10px;
+        color: $primary-color;
+        
+    }
+    .clientSelHeading{
+        display: flex;
+        align-items: center;
+        height: 26px;
+        gap: 1vw;
+    }
+    .clientSelHeading p{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .selectedClient{
+        
+        color: $primary-color;
+        font-size: 24px;
+        font-weight: 500;
+    }
+ }
+ .clients::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .clients::-webkit-scrollbar-thumb {
+    background-color: #7bb83a;
+    border-radius: 5px;
+  }
+ .clients{
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: 48vw;
+    overflow-y: auto;
+    height: 80vh;
+    position: relative;
+    gap: 10px;
+   
+    .clientAvailable{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .radioBtnClientName{
+      
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .clientClicked{
+        margin-bottom: 3vh;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 600;
+        display: flex;
+        width: 44vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        justify-content: space-between;
+       
+    }
+    .clientClicked .radioBtn{
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 17px;
+        height: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 3vw;
+    }
+    .clientClicked .clientNName{
+        color: $primary-color;
+    }
+    .clientClicked .radioBtn .innerRadioBtn{
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color:$primary-color ;
+
+        
+    }
+    .clientNotClicked .radioBtn{
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        margin-right: 3vw;
+    
+    }
+    .clientNotClicked{
+        margin-bottom: 3vh;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 600;
+        display: flex;
+        width: 44vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        justify-content: space-between;
+    }
+    .moreIcon{
+        content: url("../../../assets/More.svg");
+    }
+ }
+ .displayClientProjects:hover{
+    cursor: pointer;
+ }
+ .menu {
+    position: absolute;
+    width: 18rem;
+    // top: 5rem; 
+    left: 19rem;
+    background-color: $color-white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.8rem;
+
+    ul {
+      list-style-type: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0;
+      margin: 0;
+      color: $light-grey-text-color;
+      li {
+        padding: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+        
+
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+      .delClient {
+        color: $red-color;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      .removeTeam{
+        color: black;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .menuProjects{
+  position: absolute;
+  width: 18rem;
+  // left: 19rem;
+  background-color: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.8rem;
+
+  ul {
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    color: $light-grey-text-color;
+    li {
+      padding: 0.8rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border-radius: 5px;
+      
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+    .delClient {
+      color: $red-color;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+.moreIconDiv {
+  position: relative;
+}
+.moreIconDiv2{
+  position: relative;
+}
+.menu {
+  position: absolute;
+  top: 70%; /* Position the menu just below the parent */
+  left: -700%;
+  z-index: 1000; /* Ensure the menu is above other content */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  display: flex; /* Initially hide the menu */
+}
+
+
+
+}

@@ -1,0 +1,98 @@
+@import "../../variables";
+
+.completeProfileWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .navbar {
+    background-color: $primary-color;
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001; /*changed from 1000*/
+    h2 {
+      font-size: 2.5em;
+    }
+    h6 {
+      font-size: 1.25em;
+      font-weight: 400;
+    }
+  }
+
+  .content {
+    padding: 8rem 3rem 0 4rem; /* Adjust padding to avoid content being covered by the navbar */
+    margin-right: 1rem;
+    overflow-y: auto; /* Enable vertical scrolling for content */
+    flex-grow: 1; /* Allow content to grow to fill available space */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    /* Styling for scrollbar */
+    &::-webkit-scrollbar {
+      width: 10px; /* Width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $color-white; /* Color of the scrollbar track */
+      margin-top: 6.8rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $primary-color; /* Color of the scrollbar thumb */
+      border-radius: 5px; /* Round the corners of the scrollbar thumb */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $primary-color; /* Color of the scrollbar thumb on hover */
+    }
+
+    .profileDetail {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      h3 {
+        font-size: 1.25em;
+      }
+      button {
+        width: 48%;
+      }
+      .profileDetailBody {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        .profileDetailBodyInput {
+          width: 48%;
+          margin-bottom: 1.5rem;
+        
+          .checkBox {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            h6 {
+              font-size: 0.9em;
+              font-weight: 600;
+              color: $primary-color;
+            }
+          }
+
+          .customDropdownWrapper {
+            width: 100%;
+          }
+        }
+      }
+      .submitButton {
+        width: 48%;
+      }
+    }
+  }
+}
